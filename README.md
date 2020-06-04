@@ -1,29 +1,12 @@
 # common-template
 
-## Project setup
-```
-yarn install
-```
+## 依赖
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+axios、vue-router、scss、pug
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+## 基础配置
 
-### Run your tests
-```
-yarn run test
-```
+1. axios基础封装
+2. 路由基础配置
 
-### Lints and fixes files
-```
-yarn run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

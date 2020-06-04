@@ -3,6 +3,10 @@ import App from './App.vue'
 
 Vue.config.productionTip = false
 
+import '@/scss/index.scss'
+import router from '@/router'
+
 new Vue({
+  router,
   render: h => h(App),
 }).$mount('#app')
