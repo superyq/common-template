@@ -19,7 +19,7 @@ const routes = [
   {
     path: '/demo2',
     component: () => import('@/pages/demo2')
-  }
+  },
 ]
 
 export default routes;
