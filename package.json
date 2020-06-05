@@ -7,7 +7,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "page": "node node/page.js"
+    "page": "node node/page.js",
+    "clear": "node node/clear.js"
   },
   "dependencies": {
     "axios": "^0.19.2",
