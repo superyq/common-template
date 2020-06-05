@@ -26,8 +26,7 @@ axios、vue-router、scss、pug
 
 ```js
 yarn page login // 创建pages/login/index.vue、scss/pages/login.scss、添加router/routes路由
-yarn page login noscss // 不创建scss文件 
-yarn page login noscss norouter // 只创建pages/login/index.vue
+yarn page login norouter // 不添加router路由
 ```
 
 2. 重置demo页内容
