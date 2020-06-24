@@ -1,8 +1,8 @@
 var fs = require("fs");
 
 // page模板
-const pageTmp = `<template>
-  <div>demo</div>
+const pageTmp = `<template lang='pug'>
+  .demo demo
 </template>
 <script>
 export default {
