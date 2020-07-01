@@ -6,7 +6,6 @@ const routes = [
   },
   {
     path: '/',
-    component: () => import('@/pages/home'),
     redirect: { name: 'demo' }
   },
   {
@@ -17,14 +16,6 @@ const routes = [
     path: '/demo',
     name: 'demo',
     component: () => import('@/pages/demo')
-  },
-  {
-    path: '/demo1',
-    component: () => import('@/pages/demo1')
-  },
-  {
-    path: '/demo2',
-    component: () => import('@/pages/demo2')
   },
 ]
 

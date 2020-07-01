@@ -5,6 +5,9 @@ function join(dir) {
 }
 
 module.exports = {
+  devServer: {
+    proxy: 'http://128.196.118.101:8101'
+  },
   chainWebpack: config => {
     config.resolve.alias.set('@', join('src'));
   }
