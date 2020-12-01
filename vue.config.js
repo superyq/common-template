@@ -5,6 +5,9 @@ function join(dir) {
 }
 
 module.exports = {
+  publicPath: './',
+  filenameHashing: false,
+  productionSourceMap: false,
   devServer: {
     proxy: 'http://128.196.118.101:8101'
   },

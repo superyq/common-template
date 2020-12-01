@@ -1,0 +1,59 @@
+// 字体颜色渐变
+.c-text-color {
+  background-image: -webkit-linear-gradient(bottom, #9ad9fd, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// 图片自适应盒子
+.c-img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes turn {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(270deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes turnB {
+  0% {
+    -webkit-transform: rotate(360deg);
+  }
+  25% {
+    -webkit-transform: rotate(270deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(90deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+.turn {
+  transform-origin: center center;
+  animation: turn 2s linear infinite;
+}
+
+.turnB {
+  transform-origin: center center;
+  animation: turnB 2s linear infinite;
+}
