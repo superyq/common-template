@@ -1,6 +1,10 @@
 /*********** REM.js ***********/
 (function(doc, win) {
+<<<<<<< HEAD
   let widthDafule = 1920;
+=======
+  let widthDafule = 3840;
+>>>>>>> 20ed6047c96979af3aebabaae3e6a6852661302d
   var docEl = doc.documentElement,
     // orientationchange 事件 用来监听手机屏幕的反转
     resizeEvt = "orientationchange" in window ? "orientationchange" : "resize",
