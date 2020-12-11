@@ -49,6 +49,7 @@ function createRouter() {
 
     content = `${content}  {
       path: '/${pageName}',
+      name: '${pageName}',
       component: () => import('@/pages/${pageName}')
     },
     `

@@ -1,36 +1,72 @@
-<template>
-  <div>demo</div>
+<template lang='pug'>
+.demo
+  .box
+    .box_item
 </template>
+
 <script>
-import datas from "@/datas/信用卡/page2.js";
 import { getData } from "@/api/page2.js";
- 
+
 export default {
   name: "demo",
-  data() {
-    return {
-      datas
-    }
-  },
   methods: {
-    dealData(obj) {
-      return JSON.parse(obj.TX_BODY.ENTITY.Data_Enqr_Rslt).rows
+    getData() {
+      getData()
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     },
-    getdatas() {
-      getData().then(data => {
-        console.log(data)
-      }).catch(err => {
-        console.log(err)
-      })
+    getMoney() {
+      let arrFive = [];
+      let arrTwo = [];
+      let five;
+      let two;
+      five = setInterval(() => {
+        var a = Math.floor(Math.random() * 35);
+        if (arrFive.length < 5 && !arrFive.includes(a)) {
+          arrFive.push(Math.floor(a));
+        } else {
+          clearInterval(five);
+          console.log(arrFive);
+        }
+      }, 100);
+
+      two = setInterval(() => {
+        var b = Math.floor(Math.random() * 12);
+        if (arrTwo.length < 2 && !arrTwo.includes(b)) {
+          arrTwo.push(b);
+        } else {
+          clearInterval(two);
+          console.log(arrTwo);
+        }
+      }, 100);
     }
   },
   mounted() {
-    this.getdatas();
-    let obj = {}
-    Object.keys(datas).map(i => {
-      obj[i] = this.dealData(datas[i]);
-    })
-    console.log(obj)
-  }
+    this.getData();
+  },
 };
 </script>
+
+<style lang='scss'>
+.demo {
+  width: 100%;
+  height: 100vh;
+}
+.box {
+  // width: 500px;
+  // height: 500px;
+  // margin: 0 auto;
+  border: 1px solid;
+}
+.box_item {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  // margin: 20px auto;
+  border: 1px solid;
+}
+</style>

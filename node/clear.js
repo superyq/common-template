@@ -4,11 +4,16 @@ var fs = require("fs");
 const pageTmp = `<template lang='pug'>
   .demo demo
 </template>
+
 <script>
 export default {
   name: 'demo'
 }
-</script>`
+</script>
+
+<style lang='scss'>
+
+</style>`
 
 fs.writeFile("./src/pages/demo/index.vue", pageTmp, err => {
   if(err) return console.log(`报错信息: ${err.code}`);
