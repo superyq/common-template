@@ -8,6 +8,12 @@ import '@/scss/index.scss'
 import router from '@/router'
 // 自适应js
 import '@/utils/rem.js';
+// echarts
+import echarts from 'echarts';
+Vue.prototype.$echarts = echarts;
+// 自定义组件
+import myComponents from "@/components";
+Vue.use(myComponents);
 
 new Vue({
   router,

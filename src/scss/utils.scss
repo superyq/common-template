@@ -12,6 +12,12 @@
   object-fit: cover;
 }
 
+// 图片基础属性
+.c-basebg {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
 @keyframes turn {
   0% {
     -webkit-transform: rotate(0deg);

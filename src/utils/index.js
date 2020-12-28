@@ -153,10 +153,10 @@ export function countDown(endTimeStamp) {
     var minutes = parseInt((mss % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = parseInt((mss % (1000 * 60)) / 1000);
     time = {
-      day: days.toString().padStart(2,0),
-      hour: hours.toString().padStart(2,0),
-      minute: minutes.toString().padStart(2,0),
-      second: seconds.toString().padStart(2,0),
+      day: days.toString().padStart(2, 0),
+      hour: hours.toString().padStart(2, 0),
+      minute: minutes.toString().padStart(2, 0),
+      second: seconds.toString().padStart(2, 0),
       mss: mss
     }
   } else {
@@ -169,4 +169,18 @@ export function countDown(endTimeStamp) {
     }
   }
   return time;
+}
+
+// 计算当前时间
+export function getNowTime() {
+  let time = new Date();
+  let _time = {
+    year: time.getFullYear(),
+    month: repair(time.getMonth() + 1),
+    day: repair(time.getDate()),
+    hour: repair(time.getHours()),
+    minute: repair(time.getMinutes()),
+    second: repair(time.getMinutes())
+  }
+  return _time;
 }
