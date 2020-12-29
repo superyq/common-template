@@ -1,7 +1,7 @@
 <template lang="pug">
   .c-loading(v-if='loading')
     .c-loading_img
-        img.c-img-cover(src='@/assets/common/loading.gif')
+      img.c-img-cover(src='../assets/common/loading.gif')
 </template>
 
 <script>
